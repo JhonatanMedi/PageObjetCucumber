@@ -32,9 +32,9 @@ public class Registro {
 	}
 
 	@Step
-	public void agregarEmail(WebDriver driver) {
+	public void agregarEmail(WebDriver driver,String Email) {
 		email.click();
-		email.sendKeys("pruebas");
+		email.sendKeys(Email);
 	}
 
 }

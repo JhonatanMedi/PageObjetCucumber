@@ -19,11 +19,11 @@ public class DefinitionsSteps {
 		this.driver = this.conexion.abrirNavegador();
 		
 	}
-	@And("^Registro$")
-	public void diligenciar_Formulario() {
+	@And("^Ingresar al formulario (.*)$")
+	public void diligenciar_Formulario(String Email) {
 		this.registro = new Registro(driver);
 		this.registro.clicCrearCuenta(driver);
-		this.registro.agregarEmail(driver);
+		this.registro.agregarEmail(driver,Email);
 	
 	}
 }
