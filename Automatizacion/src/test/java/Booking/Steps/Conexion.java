@@ -17,7 +17,7 @@ public class Conexion {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.navigate().to("https://www.booking.com/");
-		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		return this.driver;
 
 	}
