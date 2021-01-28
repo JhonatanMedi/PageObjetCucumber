@@ -12,7 +12,6 @@ public class CrearContraseña {
 
 	@FindBy(how = How.ID, using = "new_password")
 	private WebElement NewContraseña;
-
 	@FindBy(how = How.ID, using = "confirmed_password")
 	private WebElement ConfirmedContraseña;
 
