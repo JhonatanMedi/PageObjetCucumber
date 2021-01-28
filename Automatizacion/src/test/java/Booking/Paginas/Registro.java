@@ -13,10 +13,10 @@ public class Registro {
 	private WebElement CrearCuenta;
 
 	@FindBy(how = How.ID, using = "username")
-	WebElement email;
+	private WebElement email;
 	
 	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[3]/button[1]/span[1]")
-	WebElement btnContinuar;
+	private WebElement btnContinuar;
 
 	public Registro(WebDriver driver) {
 		PageFactory.initElements(driver, this);
