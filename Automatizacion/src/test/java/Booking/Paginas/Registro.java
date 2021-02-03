@@ -1,7 +1,13 @@
 package Booking.Paginas;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
@@ -14,7 +20,7 @@ public class Registro {
 
 	@FindBy(how = How.ID, using = "username")
 	private WebElement email;
-	
+
 	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[3]/button[1]/span[1]")
 	private WebElement btnContinuar;
 
@@ -30,9 +36,11 @@ public class Registro {
 	}
 
 	@Step
-	public void agregarEmail(WebDriver driver, String Email) {
+	public void agregarEmail(WebDriver driver, String Email) throws IOException {
 		email.click();
 		email.sendKeys(Email);
+		   File source = ((TakesScreenshot)btnContinuar).getScreenshotAs(OutputType.FILE);
+	        FileHandler.copy(source, new File("Downloads"));
 		btnContinuar.click();
 	}
 
