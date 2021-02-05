@@ -1,9 +1,7 @@
 package Booking.Definitions;
 
 import java.io.IOException;
-
 import org.openqa.selenium.WebDriver;
-
 import Booking.Paginas.CrearContraseña;
 import Booking.Paginas.Registro;
 import Booking.Steps.Conexion;
@@ -34,7 +32,7 @@ public class DefinitionsSteps {
 	}
 
 	@And("^Diligenciar los campos de contraseña (.*)  confirmar (.*)$")
-	public void diligenciar_contraseña(String NuevaContraseña, String ConfirmarContraseña) {
+	public void diligenciar_contraseña(String NuevaContraseña, String ConfirmarContraseña) throws IOException {
 		this.crearContraseña = new CrearContraseña(driver);
 		this.crearContraseña.Contraseña(driver, NuevaContraseña, ConfirmarContraseña);
 
