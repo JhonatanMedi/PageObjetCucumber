@@ -172,7 +172,7 @@
 				<configuration>
 					<testFailureIgnore>false</testFailureIgnore>
 					<includes>
-						<include>com.asesoftware/**/*.java</include>
+						<include>Asesoftware/**/*.java</include>
 					</includes>
 					<systemProperties>
 						<webdriver.driver>${webdriver.driver}</webdriver.driver>
