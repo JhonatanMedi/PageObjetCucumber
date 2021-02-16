@@ -1,20 +1,11 @@
 package Booking.Paginas;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.Date;
-
-import org.apache.commons.io.FileUtils;
-import org.junit.Assert;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import com.ibm.icu.text.SimpleDateFormat;
-
 import Booking.Steps.Questions;
 import net.thucydides.core.annotations.Step;
 
@@ -49,10 +40,12 @@ public class Registro {
 		email.click();
 		email.sendKeys(Email);
 		
-		questions.urlAssert(driver);
+		
 		questions.screenShot(driver);
 
 		btnContinuar.click();
+		
+	
 	}
 
 }

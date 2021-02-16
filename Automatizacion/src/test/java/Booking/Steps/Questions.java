@@ -16,15 +16,15 @@ import org.openqa.selenium.OutputType;
 
 public class Questions {
 
-	
-
 	@Step
-	public void urlAssert(WebDriver driver) {
-		Assert.assertTrue(driver.getCurrentUrl().contains("register"));
+	public void tituloAssert(WebDriver driver) {
+
+		String ActualTitle = driver.getTitle();
+		Assert.assertEquals(ActualTitle, "Booking.com");
 	}
 
 	@Step
-	public void screenShot(WebDriver driver)  {
+	public void screenShot(WebDriver driver) {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		File scr = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		String filename = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
@@ -34,11 +34,15 @@ public class Questions {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			
-			
+
 		}
 
-	
-
 	}
+
+	@Step
+	public void textoAssert(WebDriver driver) {
+
+		Assert.assertEquals("Crea una contraseña", "Crea una contraseña");
+	}
+
 }

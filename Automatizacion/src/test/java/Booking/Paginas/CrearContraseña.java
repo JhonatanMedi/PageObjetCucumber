@@ -29,10 +29,13 @@ public class CrearContraseña {
 
 	@Step
 	public void Contraseña(WebDriver driver, String NuevaContraseña, String ConfirmarContraseña) throws IOException {
+		this.questions.tituloAssert(driver);
+		this.questions.textoAssert(driver);
+
 		NewContraseña.sendKeys(NuevaContraseña);
 		ConfirmedContraseña.sendKeys(ConfirmarContraseña);
 
-		questions.screenShot(driver);
+		this.questions.screenShot(driver);
 
 		BtnCrearCuenta.click();
 
