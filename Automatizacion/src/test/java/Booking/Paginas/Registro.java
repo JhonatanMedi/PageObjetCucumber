@@ -31,6 +31,7 @@ public class Registro {
 	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[3]/button[1]/span[1]")
 	private WebElement btnContinuar;
 
+
 	public Registro(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 
