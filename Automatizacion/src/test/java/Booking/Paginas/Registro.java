@@ -12,6 +12,7 @@ import net.thucydides.core.annotations.Step;
 public class Registro {
 
 	private Questions questions = new Questions();
+// WebDriver driver;
 
 	@FindBy(how = How.XPATH, using = "//header/nav[1]/div[2]/div[5]/a[1]")
 	private WebElement CrearCuenta;
@@ -21,7 +22,7 @@ public class Registro {
 
 	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[3]/button[1]/span[1]")
 	private WebElement btnContinuar;
-
+	private Boolean b;
 
 	public Registro(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -39,13 +40,11 @@ public class Registro {
 
 		email.click();
 		email.sendKeys(Email);
-		
-		
-		questions.screenShot(driver);
+
+		this.questions.screenShot(driver);
+		this.questions.textoCrearCuentaAssert(driver);
 
 		btnContinuar.click();
-		
-	
-	}
 
+	}
 }

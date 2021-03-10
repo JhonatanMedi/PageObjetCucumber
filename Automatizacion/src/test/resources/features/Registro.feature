@@ -10,6 +10,6 @@ Scenario Outline: scenario description
 	
 	Examples: 
 		| Email 					| NuevaContraseña|ConfirmarContraseña|
-		|jooyddddsppjkjka@asesoftware.com |Pruebas2020	 |Pruebas2020|
+		|jmedina@asesoftware.com |Pruebas2020	 |Pruebas2020|
 		
 		

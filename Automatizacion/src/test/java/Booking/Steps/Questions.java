@@ -42,7 +42,12 @@ public class Questions {
 	@Step
 	public void textoAssert(WebDriver driver) {
 
-		Assert.assertEquals("Crea una contraseña", "Crea una contraseña");
+		Assert.assertEquals("Introduce tu contraseña", "Introduce tu contraseña");
 	}
 
+	@Step
+	public void textoCrearCuentaAssert(WebDriver driver) {
+
+		Assert.assertEquals("Crea una contraseña", "Crea una contraseña");
+	}
 }
